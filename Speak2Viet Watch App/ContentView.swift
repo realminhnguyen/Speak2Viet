@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Button(action: {
+                        print("Success")
+                    }) {
+                        VStack {
+                            Image(systemName: "mic.circle")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 100)
+                                .foregroundStyle(.tint)
+                            Text("Tap to Speak")
+                        }
+                    }
+                    .buttonStyle(PlainButtonStyle())  // Removes default button styling, removing the pill button container
     }
 }
 
